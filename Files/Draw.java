@@ -19,7 +19,7 @@ public class Draw extends JLabel{
 		
 		// SpielCharakter
 		if (Var.standstill == true && Var.moveright == false && Var.moveleft == false){
-			g.drawImage(Var.Fireman, Var.x, Var.y, Var.Charwitdh, Var.Charheight, null);
+			g.drawImage(Var.gifStandstill, Var.x, Var.y, Var.Charwitdh, Var.Charheight, null);
 		}
 		
 		if(Var.moveright == true && Var.moveleft == false) {

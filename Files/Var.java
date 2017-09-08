@@ -24,7 +24,7 @@ public class Var {
 	static boolean jump = false, crouch = false, sprint = false, fall = false;
 
 	static BufferedImage Fireman;
-	static Image gifAnimright, gifAnimleft;
+	static Image gifAnimright, gifAnimleft, gifStandstill;
 	
 
 	public Var() {
@@ -37,6 +37,7 @@ public class Var {
 			// Animright
 			gifAnimright = Toolkit.getDefaultToolkit().createImage("src/Pics/animright.gif");
 			gifAnimleft = Toolkit.getDefaultToolkit().createImage("src/Pics/animleft.gif");
+			gifStandstill = Toolkit.getDefaultToolkit().createImage("src/Pics/standstill.gif");
 			System.out.println("System: Pictures successfully loaded!");
 
 		} catch (IOException e) {
