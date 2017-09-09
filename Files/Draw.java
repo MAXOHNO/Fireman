@@ -39,7 +39,32 @@ public class Draw extends JLabel {
 		if (Var.moveleft == true && Var.moveright == false) {
 			g.drawImage(Var.gifAnimleft, Var.x, Var.y, Var.Charwitdh, Var.Charheight, null);
 		}
-		
+
+		if (Var.attack == true) {
+			g.drawImage(Var.gifAttack, Var.x, Var.y, 384, 256, null);
+		}
+
+		if (Var.enemyExists == true) {
+			g.drawImage(Var.gifEnemystand, Var.enemyx, Var.enemyy, 256, 256, null);
+		} else if (Var.enemyIsDying == true) {
+			g.drawImage(Var.gifEnemydying, Var.enemyx, Var.enemyy, 256, 256, null);
+		}
+
+	/*
+	  	if (Var.Johnnystand == true) {
+			if (Var.moveleft == true) {
+				g.drawImage(Var.JohnnyStand, Var.x + 300, Var.y, 256, 256, null);
+			} else {
+				g.drawImage(Var.JohnnyStand, Var.x - 300, Var.y, 256, 256, null);
+			}
+		} else if (Var.Johnnymove == true) {
+			if (Var.moveleft == true) {
+				g.drawImage(Var.JohnnyBorad, Var.x + 300, Var.y - 64, 256, 320, null);
+			} else {
+				g.drawImage(Var.JohnnyBorad, Var.x - 300, Var.y - 64, 256, 320, null);
+			}
+		}
+	 */
 		// Koordinaten
 		g.drawString("BackX: " + Var.backx, 20, 20);
 		g.drawString("Var.x: " + Var.x, 20, 40);

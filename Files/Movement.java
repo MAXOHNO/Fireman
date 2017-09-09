@@ -6,7 +6,7 @@ import java.util.TimerTask;
 public class Movement {
 	Timer Run;
 	Timer Background;
-	Timer gegner;
+	Timer enemy;
 
 	public Movement() {
 		Run = new Timer();
@@ -46,8 +46,10 @@ public class Movement {
 				if (Var.x >= 1000 && Var.moveright == true && Var.backx != -2550) {
 					if (Var.sprint == true) {
 						Var.backx -= 6;
+						Var.enemyx -= 6;
 					} else {
 						Var.backx -= 3;
+						Var.enemyx -= 3;
 					}
 
 				}
@@ -55,8 +57,10 @@ public class Movement {
 				if (Var.x <= 30 && Var.moveleft == true && Var.backx != 0) {
 					if (Var.sprint == true) {
 						Var.backx += 6;
+						Var.enemyx += 6;
 					} else {
 						Var.backx += 3;
+						Var.enemyx += 3;
 					}
 
 				}
@@ -64,14 +68,17 @@ public class Movement {
 			}
 		}, 0, 6);
 
-		gegner = new Timer();
-		gegner.schedule(new TimerTask() {
+		enemy = new Timer();
+		enemy.schedule(new TimerTask() {
 
 			@Override
 			public void run() {
+				
+				
 
 			}
-		}, 0, 6);
+		}, 0, 40);
+	
 
 		System.out.println("System: Movement Loaded successfully!");
 	}

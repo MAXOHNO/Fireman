@@ -10,12 +10,16 @@ public class KeyHandler implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if (Var.ingame == true) {
+		if (Var.ingame == true && Var.inAttack == false) {
 			if (e.getKeyCode() == KeyEvent.VK_A) {
 				Var.standstill = false;
+				Var.Johnnymove = true;
+				Var.Johnnystand = false;
 				Var.moveleft = true;
 				Var.animleft = true;
 			} else if (e.getKeyCode() == KeyEvent.VK_D) {
+				Var.Johnnymove = true;
+				Var.Johnnystand = false;
 				Var.standstill = false;
 				Var.moveright = true;
 				Var.animright = true;
@@ -28,17 +32,20 @@ public class KeyHandler implements KeyListener {
 		if(Var.startscreen == true) {
 			if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			Var.startscreen = false;
+			Var.Johnnystand = true;
 			Var.ingame = true;
+			Var.enemyExists = true;
 			Var.standstill = true;
-			System.out.println("Mouse Clicked!");
 			}
 		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		if (Var.ingame == true) {
+		if (Var.ingame == true && Var.inAttack == false) {
 			if (e.getKeyCode() == KeyEvent.VK_A) {
+				Var.Johnnymove = false;
+				Var.Johnnystand = true;
 				Var.standstill = true;
 				Var.moveleft = false;
 				Var.animleft = false;
@@ -46,6 +53,8 @@ public class KeyHandler implements KeyListener {
 				Var.standstill = true;
 				Var.moveright = false;
 				Var.animright = false;
+				Var.Johnnymove = false;
+				Var.Johnnystand = true;
 			} else if (e.getKeyCode() == KeyEvent.VK_SHIFT) {
 				Var.sprint = false;
 			}

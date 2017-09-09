@@ -12,11 +12,12 @@ public class Gui {
 		Var.jf1.setSize(Var.screenwidth, Var.screenheight);
 		Var.jf1.setVisible(true);
 		Var.jf1.setResizable(false);
-		Var.jf1.setTitle("Max' Jumping Adventures! -MaxCodez");
+		Var.jf1.setTitle("Animgame! -MaxCodez");
 		Var.jf1.setDefaultCloseOperation(3); // Exit_On_Close !
 		Var.jf1.setLayout(null);
 		Var.jf1.setLocationRelativeTo(null);
 		Var.jf1.addKeyListener(new KeyHandler());
+		Var.jf1.addMouseListener(new MouseHandler());
 		Var.jf1.requestFocus();
 		
 		Draw lbldraw = new Draw();
