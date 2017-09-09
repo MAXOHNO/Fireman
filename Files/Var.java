@@ -15,17 +15,17 @@ public class Var {
 	static int screenheight = 720, screenwidth = 1280;
 	static int backx = 0;
 
-	static int x = 740, y = 360;
+	static int x = 740, y = 340;
 	static int Charwitdh = 256, Charheight = 256;
 	
-	static boolean ingame = false;
+	static boolean ingame = false, startscreen = true;
 	static boolean standstill = true;
 	static boolean moveleft = false, moveright = false;
 	static boolean animleft = false, animright = false;
 	static boolean jump = false, crouch = false, sprint = false, fall = false;
 
 	static BufferedImage BackLvl1;
-	static Image gifAnimright, gifAnimleft, gifStandstill;
+	static Image gifAnimright, gifAnimleft, gifStandstill, gifStartscreen;
 	
 
 	public Var() {
@@ -44,6 +44,7 @@ public class Var {
 		
 		
 			// Animright
+			gifStartscreen = Toolkit.getDefaultToolkit().createImage("src/Pics/startscreen.gif");
 			gifAnimright = Toolkit.getDefaultToolkit().createImage("src/Pics/animright.gif");
 			gifAnimleft = Toolkit.getDefaultToolkit().createImage("src/Pics/animleft.gif");
 			gifStandstill = Toolkit.getDefaultToolkit().createImage("src/Pics/standstill.gif");
