@@ -15,6 +15,7 @@ public class MainClass {
 		new Var();
 		new KeyHandler();
 		new Movement();
+		new Draw();
 
 	}
 }

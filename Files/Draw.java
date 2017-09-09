@@ -17,6 +17,10 @@ public class Draw extends JLabel{
 		
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
+		//Background
+		g.drawImage(Var.BackLvl1, Var.backx, 0, 3840, 720, null);
+		
+		
 		// SpielCharakter
 		if (Var.standstill == true && Var.moveright == false && Var.moveleft == false){
 			g.drawImage(Var.gifStandstill, Var.x, Var.y, Var.Charwitdh, Var.Charheight, null);
