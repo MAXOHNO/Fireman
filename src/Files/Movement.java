@@ -16,11 +16,19 @@ public class Movement {
 			public void run() {
 
 				if (Var.moveright == true) {
-					if (Var.x <= 1000) {
+					if (Var.x <= 800) {
 						if (Var.sprint == true) {
 							Var.x += 11;
 						} else {
 							Var.x += 6;
+						}
+					} else if (Var.backx <= -2500 && Var.backx >= -2560) {
+						if (Var.x <= 1000) {
+							if (Var.sprint == true) {
+								Var.x += 11;
+							} else {
+								Var.x += 6;
+							}
 						}
 					}
 				} else if (Var.moveleft == true) {
@@ -45,7 +53,8 @@ public class Movement {
 
 				if (Var.ingame == true) {
 
-					if (Var.x >= 1000 && Var.moveright == true) {
+					if (Var.x >= 800 && Var.moveright == true) {
+						
 						if (Var.Level1 == true && Var.backx >= -2550) {
 							if (Var.sprint == true) {
 								Var.enemylv1x -= 6;
@@ -57,13 +66,38 @@ public class Movement {
 								Var.lv1rchdx -= 3;
 							}
 						}
-
-						if (Var.Level2 == true && Var.backx >= -6400) {
-							if (Var.sprint == true) {
+						
+						if(Var.Level2 == true && Var.backx >= -6400) {
+							if(Var.sprint == true) {
 								Var.backx -= 6;
+								if(Var.BossExists2 == true) {
+									Var.bosslv2x -= 6;
+								}
+								if(Var.enemyExists2_1 == true || Var.enemyAttacks2_1 == true) {
+									Var.enemylv2x1 -= 6;
+								}
+								if(Var.enemyExists2_2 == true || Var.enemyAttacks2_2 == true) {
+									Var.enemylv2x2 -= 6;
+								}
+								if(Var.enemyExists2_3 == true || Var.enemyAttacks2_3 == true) {
+									Var.enemylv2x3 -= 6;
+								}
 							} else {
 								Var.backx -= 3;
+								if(Var.BossExists2 == true) {
+									Var.bosslv2x -= 3;
+								}
+								if(Var.enemyExists2_1 == true) {
+									Var.enemylv2x1 -= 3;
+								}
+								if(Var.enemyExists2_2 == true) {
+									Var.enemylv2x2 -= 3;
+								}
+								if(Var.enemyExists2_3 == true) {
+									Var.enemylv2x3 -= 3;
+								}
 							}
+								
 						}
 
 					}
@@ -84,6 +118,34 @@ public class Movement {
 								Var.backx += 6;
 							} else {
 								Var.backx += 3;
+							}
+							if (Var.BossExists2 == true) {
+								if (Var.sprint == true) {
+									Var.bosslv2x += 6;
+								} else {
+									Var.bosslv2x += 3;
+								}
+							}
+							if (Var.enemyExists2_1 == true || Var.enemyAttacks2_1 == true) {
+								if (Var.sprint == true) {
+									Var.enemylv2x1 += 6;
+								} else {
+									Var.enemylv2x1 += 3;
+								}
+							}
+							if (Var.enemyExists2_2 == true || Var.enemyAttacks2_2 == true) {
+								if (Var.sprint == true) {
+									Var.enemylv2x2 += 6;
+								} else {
+									Var.enemylv2x2 += 3;
+								}
+							}
+							if (Var.enemyExists2_3 == true || Var.enemyAttacks2_3 == true) {
+								if (Var.sprint == true) {
+									Var.enemylv2x3 += 6;
+								} else {
+									Var.enemylv2x3 += 3;
+								}
 							}
 						}
 

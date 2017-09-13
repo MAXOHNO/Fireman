@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class Var {
@@ -16,6 +15,8 @@ public class Var {
 	static JFrame jf1;
 	static int screenheight = 720, screenwidth = 1280;
 	static int backx = 0;
+	static int Score = 0;
+	static int Timer1 = 0;
 
 	// Me Integers
 	static int Charwitdh = 256, Charheight = 256;
@@ -23,8 +24,14 @@ public class Var {
 	static int HP = 3;
 	static int Credits = 0;
 	
-	// Enemy Integers
+	// Enemy Integers Level 1
 	static int enemylv1x = 2300, enemylv1y = 340;
+	
+	// Enemy Integers Level 2
+	static int enemylv2x1 = 1900, enemylv2x2 = 2500, enemylv2x3 = 3100;
+	
+	// Boss Integers Level 2
+	static int bosslv2x = 5000, bosslv2HP = 9;
 	
 	// Level Integers
 	static int lv1rchdx = 3500, lv1rchdy = 340;
@@ -52,13 +59,21 @@ public class Var {
 	// Enemy Level 1
 	static boolean enemyExists = false, enemyIsDying, enemyAttacks;
 	
+	// Enemy Level 2
+	static boolean enemyExists2_1 = false, enemyExists2_2 = false, enemyExists2_3 = false;
+	static boolean enemyIsDying2_1 = false, enemyIsDying2_2 = false, enemyIsDying2_3 = false;
+	static boolean enemyAttacks2_1 = false, enemyAttacks2_2 = false, enemyAttacks2_3 = false;
+	
+	// Boss Level 2
+	static boolean BossExists2 = false, BossIsDying2 = false, BossAttacks2 = false, BossIsAttacked2 = false;
 
 
 	static BufferedImage BackLvl1, BackLvl2, ESCscreen, BTNexit, BTNsettings, BTNshop, BTNinfo;
 	static Image gifAnimright, gifAnimleft, gifStandstill, gifAttack, gifChardead;
-	static Image  gifJohnny, JohnnyBorad, JohnnyStand;
+	static Image gifJohnny, JohnnyBorad, JohnnyStand;
 	static Image gifStartscreen, gifLvl1Rched;
 	static Image gifEnemystand, gifEnemydying, gifEnemyattacks;
+	static Image gifBossStandstill2, gifBossIsAttack2;
 	
 
 	public Var() {
@@ -66,7 +81,7 @@ public class Var {
 		
 			// Images
 			try {
-				
+
 				BackLvl2 = ImageIO.read(new File("src/Pics/BackLvl2.png"));
 				BTNexit = ImageIO.read(new File("src/Pics/btnexit.png"));
 				BTNshop = ImageIO.read(new File("src/Pics/btnshop.png"));
@@ -83,8 +98,8 @@ public class Var {
 				e.printStackTrace();
 			}
 		
-		
-			// Animright
+			gifBossIsAttack2 = Toolkit.getDefaultToolkit().createImage("src/Pics/bossAttack.gif");
+			gifBossStandstill2 = Toolkit.getDefaultToolkit().createImage("src/Pics/bossStandstill.gif");
 			gifLvl1Rched = Toolkit.getDefaultToolkit().createImage("src/Pics/Level1Reached.gif");
 			gifEnemyattacks = Toolkit.getDefaultToolkit().createImage("src/Pics/enemyattacks.gif");
 			gifEnemydying = Toolkit.getDefaultToolkit().createImage("src/Pics/enemyDying.gif");

@@ -34,6 +34,9 @@ public class MouseHandler implements MouseListener {
 			Var.moveleft = false;
 		}
 		if (Var.ingame == false && Var.startscreen == true) {
+			Var.Timer1 = 0;
+			Var.Score = 0;
+			Var.sprint = false;
 			Var.startscreen = false;
 			Var.ingame = true;
 			Var.Level1 = true;

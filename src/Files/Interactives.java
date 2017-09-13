@@ -17,14 +17,20 @@ public class Interactives {
 			@Override
 			public void run() {
 
-				// Char attacks Enemy
-				if (Var.Level2 == true) {
+				// Wenn Boss tot ist.
+				if (Var.bosslv2HP == 0) {
+					Var.BossIsDying2 = true;
+					Var.BossExists2 = false;
+				}
+
+				// Char attacks EnemyLVL1
+				if (Var.Level1 == true) {
 					if (Var.enemyExists == true && Var.Level1 == true && Var.ingame == true) {
 						if (Var.inAttack == true) {
 							if (Var.enemylv1x - Var.x <= 350) {
 								Var.enemyExists = false;
 								Var.enemyIsDying = true;
-								int rndm = (int) (Math.random() * 100);
+								int rndm = (int) (Math.random() * 50);
 								Var.Credits += rndm;
 								System.out.println("Credits: " + Var.Credits);
 								try {
@@ -40,7 +46,108 @@ public class Interactives {
 					}
 				}
 
-				// Enemy attacks Char
+				// Char attacks Enemy Level 2 - 1
+				if (Var.Level2 == true) {
+					if (Var.enemyExists2_1 == true && Var.ingame == true) {
+						if (Var.inAttack == true) {
+							if (Var.enemylv2x1 - Var.x <= 350) {
+								Var.enemyExists2_1 = false;
+								Var.enemyIsDying2_1 = true;
+								int rndm = (int) (Math.random() * 50);
+								Var.Credits += rndm;
+								System.out.println("Credits: " + Var.Credits);
+								try {
+									Thread.sleep(1600);
+								} catch (InterruptedException e) {
+
+									e.printStackTrace();
+								}
+								Var.enemyIsDying2_1 = false;
+							}
+
+						}
+					}
+				}
+
+				// Char attacks Enemy Level 2 - 2
+				if (Var.Level2 == true) {
+					if (Var.enemyExists2_2 == true && Var.ingame == true) {
+						if (Var.inAttack == true) {
+							if (Var.enemylv2x2 - Var.x <= 350) {
+								Var.enemyExists2_2 = false;
+								Var.enemyIsDying2_2 = true;
+								int rndm = (int) (Math.random() * 50);
+								Var.Credits += rndm;
+								System.out.println("Credits: " + Var.Credits);
+								try {
+									Thread.sleep(1600);
+								} catch (InterruptedException e) {
+
+									e.printStackTrace();
+								}
+								Var.enemyIsDying2_2 = false;
+							}
+
+						}
+					}
+				}
+				
+				// Char attacks Enemy Level 2 - 3
+				if (Var.Level2 == true) {
+					if (Var.enemyExists2_3 == true && Var.ingame == true) {
+						if (Var.inAttack == true) {
+							if (Var.enemylv2x3 - Var.x <= 350) {
+								Var.enemyExists2_3 = false;
+								Var.enemyIsDying2_3 = true;
+								int rndm = (int) (Math.random() * 50);
+								Var.Credits += rndm;
+								System.out.println("Credits: " + Var.Credits);
+								try {
+									Thread.sleep(1600);
+								} catch (InterruptedException e) {
+
+									e.printStackTrace();
+								}
+								Var.enemyIsDying2_3 = false;
+							}
+
+						}
+					}
+				}
+
+				// Char attacks Boss2
+				if (Var.Level2 == true) {
+					if (Var.BossExists2 == true && Var.Level2 == true && Var.ingame == true) {
+						if (Var.inAttack == true) {
+							if (Var.bosslv2x - Var.x <= 350) {
+								Var.bosslv2HP--;
+								Var.BossIsAttacked2 = true;
+								int rndm = (int) (Math.random() * 100);
+								Var.Credits += rndm;
+								System.out.println("Credits: " + Var.Credits);
+							}
+
+						}
+					}
+				}
+
+				// Boss2 attacks Char
+				if (Var.Level2 == true) {
+					if (Var.BossExists2 == true && Var.CharDead == false && Var.ingame == true) {
+						if (Var.bosslv2x - Var.x <= 350 && Var.bosslv2x - Var.x >= 20) {
+							Var.HP--;
+							Var.BossAttacks2 = true;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.BossAttacks2 = false;
+						}
+					}
+				}
+
 				if (Var.Level1 == true) {
 					if (Var.enemyExists == true && Var.CharDead == false && Var.Level1 == true && Var.ingame == true) {
 						if (Var.enemylv1x - Var.x <= 150 && Var.enemylv1x - Var.x >= 100) {
@@ -57,8 +164,68 @@ public class Interactives {
 					}
 				}
 
+				// Enemy attacks Char Level 2 - 1
+				if (Var.Level2 == true) {
+					if (Var.enemyExists2_1 == true && Var.CharDead == false && Var.Level2 == true
+							&& Var.ingame == true) {
+						if (Var.enemylv2x1 - Var.x <= 150 && Var.enemylv2x1 - Var.x >= 100) {
+							Var.HP--;
+							Var.enemyAttacks2_1 = true;
+							Var.enemyExists2_1 = false;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyAttacks2_1 = false;
+							Var.enemyExists2_1 = true;
+						}
+					}
+				}
+
+				// Enemy attacks Char Level 2 - 2
+				if (Var.Level2 == true) {
+					if (Var.enemyExists2_2 == true && Var.CharDead == false && Var.Level2 == true
+							&& Var.ingame == true) {
+						if (Var.enemylv2x2 - Var.x <= 150 && Var.enemylv2x2 - Var.x >= 100) {
+							Var.HP--;
+							Var.enemyAttacks2_2 = true;
+							Var.enemyExists2_2 = false;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyAttacks2_2 = false;
+							Var.enemyExists2_2 = true;
+						}
+					}
+				}
+
+				// Enemy attacks Char Level 2 - 3
+				if (Var.Level2 == true) {
+					if (Var.enemyExists2_3 == true && Var.CharDead == false && Var.Level2 == true
+							&& Var.ingame == true) {
+						if (Var.enemylv2x3 - Var.x <= 150 && Var.enemylv2x3 - Var.x >= 100) {
+							Var.HP--;
+							Var.enemyAttacks2_3 = true;
+							Var.enemyExists2_3 = false;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyAttacks2_3 = false;
+							Var.enemyExists2_3 = false;
+						}
+					}
+				}
+
 			}
-		}, 0, 10);
+		}, 0, 500);
 
 		lvlrchd = new Timer();
 		lvlrchd.scheduleAtFixedRate(new TimerTask() {
@@ -68,10 +235,17 @@ public class Interactives {
 
 				// Level 1 to Level 2
 				if (Var.Level1 == true && Var.ingame == true) {
-					if (Var.x >= 920 && Var.x <= 1006 && Var.backx == -2556) {
+					if (Var.x >= 900 && Var.x <= 1006 && Var.backx <= -2550) {
 						Var.Level1 = false;
 						Var.Level2 = true;
+						Var.x = 640;
+						Var.backx = 0;
 						Var.HP = 3;
+						Var.enemyExists = false;
+						Var.enemyExists2_1 = true;
+						Var.enemyExists2_2 = true;
+						Var.enemyExists2_3 = true;
+						Var.BossExists2 = true;
 						System.out.println("Level 1 Completed!");
 					}
 				}
@@ -94,6 +268,7 @@ public class Interactives {
 						Var.moveright = false;
 						Var.attack = false;
 						Var.Level2 = false;
+						Var.Score = 0;
 						if (Var.Credits >= 10) {
 							Var.Credits--;
 							Var.Credits--;

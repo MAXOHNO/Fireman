@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 
 public class Draw extends JLabel {
 
+	private static final long serialVersionUID = 1L;
+
 	protected void paintComponent(Graphics g) {
 
 		super.paintComponent(g);
@@ -20,6 +22,9 @@ public class Draw extends JLabel {
 		// Wenn Ingame ist,...
 		if (Var.ingame == true) {
 			// Wenn Level 1 ist...
+			if (Var.Level2 == true) {
+				g.drawImage(Var.BackLvl2, Var.backx, 0, 7680, 720, null);
+			}
 			if (Var.Level1 == true) {
 				// Background und Level Reached malen
 				g.drawImage(Var.BackLvl1, Var.backx, 0, 3840, 720, null);
@@ -34,9 +39,42 @@ public class Draw extends JLabel {
 				if (Var.enemyAttacks == true && Var.Level1 == true && Var.Level2 == false) {
 					g.drawImage(Var.gifEnemyattacks, Var.enemylv1x, Var.enemylv1y, 256, 256, null);
 				}
+
+				// Sonst wenn Level 2 ist...
 			} else if (Var.Level2 == true) {
-				g.drawImage(Var.BackLvl2, Var.backx, 0, 7680, 720, null);
+				if (Var.BossExists2 == true && Var.BossIsDying2 == false) {
+					g.drawImage(Var.gifBossStandstill2, Var.bosslv2x, 160, 384, 384, null);
+				}
+
+				if (Var.enemyExists2_1 == true) {
+					g.drawImage(Var.gifEnemystand, Var.enemylv2x1, 345, 256, 256, null);
+				}
+				if (Var.enemyExists2_3 == true) {
+					g.drawImage(Var.gifEnemystand, Var.enemylv2x2, 345, 256, 256, null);
+				}
+				if (Var.enemyExists2_3 == true) {
+					g.drawImage(Var.gifEnemystand, Var.enemylv2x3, 345, 256, 256, null);
+				}
+				if (Var.enemyAttacks2_1 == true) {
+					g.drawImage(Var.gifEnemyattacks, Var.enemylv2x1, 345, 256, 256, null);
+				}
+				if (Var.enemyAttacks2_2 == true) {
+					g.drawImage(Var.gifEnemyattacks, Var.enemylv2x2, 345, 256, 256, null);
+				}
+				if (Var.enemyAttacks2_3 == true) {
+					g.drawImage(Var.gifEnemyattacks, Var.enemylv2x3, 345, 256, 256, null);
+				}
+				if (Var.enemyIsDying2_1 == true) {
+					g.drawImage(Var.gifEnemydying, Var.enemylv2x1, 345, 256, 256, null);
+				}
+				if (Var.enemyIsDying2_2 == true) {
+					g.drawImage(Var.gifEnemydying, Var.enemylv2x2, 345, 256, 256, null);
+				}
+				if (Var.enemyIsDying2_3 == true) {
+					g.drawImage(Var.gifEnemydying, Var.enemylv2x3, 345, 256, 256, null);
+				}
 			}
+
 			// Player Gifs malen
 			if (Var.standstill == true && Var.moveright == false && Var.moveleft == false && Var.CharDead == false) {
 				g.drawImage(Var.gifStandstill, Var.x, Var.y, Var.Charwitdh, Var.Charheight, null);
@@ -75,6 +113,12 @@ public class Draw extends JLabel {
 				Var.Level2 = false;
 				Var.enemyExists = true;
 			}
+
+			// Boss2 Attacks
+			if (Var.BossAttacks2 == true && Var.Level2 == true && Var.ingame == true) {
+				g.drawImage(Var.gifBossIsAttack2, Var.bosslv2x, 160, 384, 384, null);
+			}
+
 			// Johnny (Erdem) malen.
 			if (Var.Johnnyenable == true) {
 				if (Var.Johnnystand == true) {
@@ -116,11 +160,14 @@ public class Draw extends JLabel {
 
 		}
 
-		// Koordinaten
-		g.drawString("BackX: " + Var.backx, 20, 20);
-		g.drawString("Var.x: " + Var.x, 20, 40);
-		g.drawString("HP: " + Var.HP, 20, 60);
-		g.drawString("Credits: " + Var.Credits, 20, 80);
+		// Schrift
+		if (Var.ingame == true) {
+			g.drawString("BackX: " + Var.backx, 20, 20);
+			g.drawString("Var.x: " + Var.x, 20, 40);
+			g.drawString("HP: " + Var.HP, 20, 60);
+			g.drawString("Credits: " + Var.Credits, 20, 80);
+			g.drawString("Survived Time: " + Var.Score, 20, 100);
+		}
 
 		repaint();
 
