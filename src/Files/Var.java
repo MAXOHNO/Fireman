@@ -35,11 +35,12 @@ public class Var {
 	
 	// Level Integers
 	static int lv1rchdx = 3500, lv1rchdy = 340;
+	static int lv2rchdx = 7300, lv2rchdy = 340;
 
 	
 	// Game Booleans
 	static boolean ingame = false, startscreen = true, escape = false;
-	static boolean Level1 = false, Level2 = false;
+	static boolean Level1 = false, Level2 = false, Level3 = false;
 	
 	// Graphical Booleans
 	static boolean Hoverexit = false, Hoversettings = false, Hovershop = false, Hoverinfo = false;
@@ -71,7 +72,7 @@ public class Var {
 	static BufferedImage BackLvl1, BackLvl2, ESCscreen, BTNexit, BTNsettings, BTNshop, BTNinfo;
 	static Image gifAnimright, gifAnimleft, gifStandstill, gifAttack, gifChardead;
 	static Image gifJohnny, JohnnyBorad, JohnnyStand;
-	static Image gifStartscreen, gifLvl1Rched;
+	static Image gifStartscreen, gifLvl1Rched, gifLvl2Rched;
 	static Image gifEnemystand, gifEnemydying, gifEnemyattacks;
 	static Image gifBossStandstill2, gifBossIsAttack2;
 	
@@ -101,6 +102,7 @@ public class Var {
 			gifBossIsAttack2 = Toolkit.getDefaultToolkit().createImage("src/Pics/bossAttack.gif");
 			gifBossStandstill2 = Toolkit.getDefaultToolkit().createImage("src/Pics/bossStandstill.gif");
 			gifLvl1Rched = Toolkit.getDefaultToolkit().createImage("src/Pics/Level1Reached.gif");
+			gifLvl2Rched = Toolkit.getDefaultToolkit().createImage("src/Pics/Level2Reached.gif");
 			gifEnemyattacks = Toolkit.getDefaultToolkit().createImage("src/Pics/enemyattacks.gif");
 			gifEnemydying = Toolkit.getDefaultToolkit().createImage("src/Pics/enemyDying.gif");
 			gifEnemystand = Toolkit.getDefaultToolkit().createImage("src/Pics/enemystand.gif");

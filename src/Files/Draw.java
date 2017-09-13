@@ -24,6 +24,7 @@ public class Draw extends JLabel {
 			// Wenn Level 1 ist...
 			if (Var.Level2 == true) {
 				g.drawImage(Var.BackLvl2, Var.backx, 0, 7680, 720, null);
+				g.drawImage(Var.gifLvl2Rched, Var.lv2rchdx, Var.lv2rchdy, 256, 256, null);
 			}
 			if (Var.Level1 == true) {
 				// Background und Level Reached malen

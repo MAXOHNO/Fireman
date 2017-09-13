@@ -70,6 +70,7 @@ public class Movement {
 						if(Var.Level2 == true && Var.backx >= -6400) {
 							if(Var.sprint == true) {
 								Var.backx -= 6;
+								Var.lv2rchdx -= 6;
 								if(Var.BossExists2 == true) {
 									Var.bosslv2x -= 6;
 								}
@@ -84,6 +85,7 @@ public class Movement {
 								}
 							} else {
 								Var.backx -= 3;
+								Var.lv2rchdx -= 3;
 								if(Var.BossExists2 == true) {
 									Var.bosslv2x -= 3;
 								}
@@ -116,8 +118,10 @@ public class Movement {
 						} else if (Var.Level2 == true && Var.backx <= -10) {
 							if (Var.sprint == true) {
 								Var.backx += 6;
+								Var.lv2rchdx += 6;
 							} else {
 								Var.backx += 3;
+								Var.lv2rchdx += 3;
 							}
 							if (Var.BossExists2 == true) {
 								if (Var.sprint == true) {

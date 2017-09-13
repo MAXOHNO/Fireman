@@ -91,7 +91,7 @@ public class Interactives {
 						}
 					}
 				}
-				
+
 				// Char attacks Enemy Level 2 - 3
 				if (Var.Level2 == true) {
 					if (Var.enemyExists2_3 == true && Var.ingame == true) {
@@ -249,6 +249,19 @@ public class Interactives {
 						System.out.println("Level 1 Completed!");
 					}
 				}
+				if (Var.Level2 == true && Var.ingame == true) {
+					if (Var.x >= 900 && Var.x <= 1006 && Var.backx <= -2550) {
+						if (Var.enemyExists2_1 == false && Var.enemyExists2_2 == false && Var.enemyExists2_3 == false
+								&& Var.BossExists2 == false) {
+							Var.Level2 = false;
+							Var.Level3 = true;
+							Var.x = 640;
+							Var.backx = 0;
+							Var.HP = 3;
+						}
+
+					}
+				}
 			}
 
 		}, 0, 6);
@@ -275,6 +288,12 @@ public class Interactives {
 							Var.Credits--;
 							Var.Credits--;
 							Var.Credits--;
+							if (Var.Level2 == true) {
+								Var.enemyExists2_1 = true;
+								Var.enemyExists2_2 = true;
+								Var.enemyExists2_3 = true;
+								Var.BossExists2 = true;
+							}
 						}
 
 					}
