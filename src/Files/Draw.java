@@ -26,6 +26,9 @@ public class Draw extends JLabel {
 				g.drawImage(Var.BackLvl2, Var.backx, 0, 7680, 720, null);
 				g.drawImage(Var.gifLvl2Rched, Var.lv2rchdx, Var.lv2rchdy, 256, 256, null);
 			}
+			if (Var.Level3 == true) {
+				g.drawImage(Var.BackLvl3, Var.backx, 0, 7680, 720, null);
+			}
 			if (Var.Level1 == true) {
 				// Background und Level Reached malen
 				g.drawImage(Var.BackLvl1, Var.backx, 0, 3840, 720, null);
@@ -141,19 +144,6 @@ public class Draw extends JLabel {
 		// Wenn in Escape
 		if (Var.escape == true) {
 			g.drawImage(Var.ESCscreen, 0, 0, Var.screenwidth, Var.screenheight, null);
-
-			if (Var.Hoverexit == false) {
-				g.drawImage(Var.BTNexit, 0, 550, 256, 124, null);
-			}
-			if (Var.Hoversettings == false) {
-				g.drawImage(Var.BTNsettings, 384, 160, 512, 124, null);
-			}
-			if (Var.Hovershop == false) {
-				g.drawImage(Var.BTNshop, 384, 300, 512, 124, null);
-			}
-			if (Var.Hoverinfo == false) {
-				g.drawImage(Var.BTNinfo, 384, 460, 512, 124, null);
-			}
 		}
 		// Wenn in Startscreen
 		if (Var.startscreen == true) {
@@ -167,6 +157,7 @@ public class Draw extends JLabel {
 			g.drawString("Var.x: " + Var.x, 20, 40);
 			g.drawString("HP: " + Var.HP, 20, 60);
 			g.drawString("Credits: " + Var.Credits, 20, 80);
+			g.drawString("Deaths: " + Var.Deaths, 20, 120);
 			g.drawString("Survived Time: " + Var.Score, 20, 100);
 		}
 

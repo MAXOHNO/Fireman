@@ -11,6 +11,7 @@ public class MainClass {
 		new Movement();
 		new Draw();
 		new Interactives();
+		new MouseHandler();
 
 	}
 }

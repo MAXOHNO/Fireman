@@ -148,6 +148,7 @@ public class Interactives {
 					}
 				}
 
+				// Enemy attacks Char Level 1 - 1
 				if (Var.Level1 == true) {
 					if (Var.enemyExists == true && Var.CharDead == false && Var.Level1 == true && Var.ingame == true) {
 						if (Var.enemylv1x - Var.x <= 150 && Var.enemylv1x - Var.x >= 100) {
@@ -171,7 +172,6 @@ public class Interactives {
 						if (Var.enemylv2x1 - Var.x <= 150 && Var.enemylv2x1 - Var.x >= 100) {
 							Var.HP--;
 							Var.enemyAttacks2_1 = true;
-							Var.enemyExists2_1 = false;
 							try {
 								Thread.sleep(500);
 							} catch (InterruptedException e) {
@@ -179,7 +179,6 @@ public class Interactives {
 								e.printStackTrace();
 							}
 							Var.enemyAttacks2_1 = false;
-							Var.enemyExists2_1 = true;
 						}
 					}
 				}
@@ -191,7 +190,6 @@ public class Interactives {
 						if (Var.enemylv2x2 - Var.x <= 150 && Var.enemylv2x2 - Var.x >= 100) {
 							Var.HP--;
 							Var.enemyAttacks2_2 = true;
-							Var.enemyExists2_2 = false;
 							try {
 								Thread.sleep(500);
 							} catch (InterruptedException e) {
@@ -199,7 +197,6 @@ public class Interactives {
 								e.printStackTrace();
 							}
 							Var.enemyAttacks2_2 = false;
-							Var.enemyExists2_2 = true;
 						}
 					}
 				}
@@ -211,7 +208,6 @@ public class Interactives {
 						if (Var.enemylv2x3 - Var.x <= 150 && Var.enemylv2x3 - Var.x >= 100) {
 							Var.HP--;
 							Var.enemyAttacks2_3 = true;
-							Var.enemyExists2_3 = false;
 							try {
 								Thread.sleep(500);
 							} catch (InterruptedException e) {
@@ -219,7 +215,6 @@ public class Interactives {
 								e.printStackTrace();
 							}
 							Var.enemyAttacks2_3 = false;
-							Var.enemyExists2_3 = false;
 						}
 					}
 				}
@@ -250,16 +245,16 @@ public class Interactives {
 					}
 				}
 				if (Var.Level2 == true && Var.ingame == true) {
-					if (Var.x >= 900 && Var.x <= 1006 && Var.backx <= -2550) {
-						if (Var.enemyExists2_1 == false && Var.enemyExists2_2 == false && Var.enemyExists2_3 == false
-								&& Var.BossExists2 == false) {
-							Var.Level2 = false;
-							Var.Level3 = true;
-							Var.x = 640;
-							Var.backx = 0;
-							Var.HP = 3;
+					if (Var.x >= 800 && Var.x <= 1006) {
+						if (Var.backx == -6402) {
+							if (Var.BossExists2 == false) {
+								Var.Level2 = false;
+								Var.Level3 = true;
+								Var.x = 640;
+								Var.backx = 0;
+								Var.HP = 3;
+							}
 						}
-
 					}
 				}
 			}
@@ -282,6 +277,7 @@ public class Interactives {
 						Var.attack = false;
 						Var.Level2 = false;
 						Var.Score = 0;
+						Var.Deaths += 1;
 						if (Var.Credits >= 10) {
 							Var.Credits--;
 							Var.Credits--;
@@ -293,6 +289,13 @@ public class Interactives {
 								Var.enemyExists2_2 = true;
 								Var.enemyExists2_3 = true;
 								Var.BossExists2 = true;
+
+								Var.enemylv2x1 = 1900;
+								Var.enemylv2x2 = 2500;
+								Var.enemylv2x3 = 3100;
+								
+								Var.bosslv2x = 5000;
+								Var.bosslv2HP = 9;
 							}
 						}
 
