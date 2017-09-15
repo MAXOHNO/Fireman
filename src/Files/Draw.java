@@ -77,6 +77,19 @@ public class Draw extends JLabel {
 				if (Var.enemyIsDying2_3 == true) {
 					g.drawImage(Var.gifEnemydying, Var.enemylv2x3, 345, 256, 256, null);
 				}
+				if (Var.BossIsAttacked2 == true) {
+					g.drawImage(Var.gifBossGetAttacked2, Var.bosslv2x, 160, 384, 384, null);
+				}
+				if (Var.BossIsDying2 == true) {
+					g.drawImage(Var.gifBossIsDying, Var.bosslv2x, 160, 384, 384, null);
+				}
+			} else if (Var.Level3 == true) {
+				if(Var.BossExists3 == true) {
+					g.drawImage(Var.gifBossStandstill3, Var.bosslv3x, 160, 384, 384, null);
+				}
+				if(Var.BossIsAttacked3 == true) {
+					g.drawImage(Var.gifBossIsAttack3, Var.bosslv3x, 160, 384, 384, null);
+				}
 			}
 
 			// Player Gifs malen

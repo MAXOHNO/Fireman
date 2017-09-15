@@ -21,6 +21,7 @@ public class Interactives {
 				if (Var.bosslv2HP == 0) {
 					Var.BossIsDying2 = true;
 					Var.BossExists2 = false;
+					Var.bosslv2HP -= 1;
 				}
 
 				// Char attacks EnemyLVL1
@@ -124,6 +125,13 @@ public class Interactives {
 								Var.BossIsAttacked2 = true;
 								int rndm = (int) (Math.random() * 100);
 								Var.Credits += rndm;
+								try {
+									Thread.sleep(500);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+								Var.BossIsAttacked2 = false;
 								System.out.println("Credits: " + Var.Credits);
 							}
 
@@ -253,6 +261,7 @@ public class Interactives {
 								Var.x = 640;
 								Var.backx = 0;
 								Var.HP = 3;
+								Var.BossExists3 = true;
 							}
 						}
 					}
@@ -293,7 +302,7 @@ public class Interactives {
 								Var.enemylv2x1 = 1900;
 								Var.enemylv2x2 = 2500;
 								Var.enemylv2x3 = 3100;
-								
+
 								Var.bosslv2x = 5000;
 								Var.bosslv2HP = 9;
 							}

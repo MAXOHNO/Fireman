@@ -71,33 +71,17 @@ public class Movement {
 							if (Var.sprint == true) {
 								Var.backx -= 6;
 								Var.lv2rchdx -= 6;
-								if (Var.BossExists2 == true) {
-									Var.bosslv2x -= 6;
-								}
-								if (Var.enemyExists2_1 == true || Var.enemyAttacks2_1 == true) {
-									Var.enemylv2x1 -= 6;
-								}
-								if (Var.enemyExists2_2 == true || Var.enemyAttacks2_2 == true) {
-									Var.enemylv2x2 -= 6;
-								}
-								if (Var.enemyExists2_3 == true || Var.enemyAttacks2_3 == true) {
-									Var.enemylv2x3 -= 6;
-								}
+								Var.bosslv2x -= 6;
+								Var.enemylv2x1 -= 6;
+								Var.enemylv2x2 -= 6;
+								Var.enemylv2x3 -= 6;
 							} else {
 								Var.backx -= 3;
 								Var.lv2rchdx -= 3;
-								if (Var.BossExists2 == true) {
-									Var.bosslv2x -= 3;
-								}
-								if (Var.enemyExists2_1 == true) {
-									Var.enemylv2x1 -= 3;
-								}
-								if (Var.enemyExists2_2 == true) {
-									Var.enemylv2x2 -= 3;
-								}
-								if (Var.enemyExists2_3 == true) {
-									Var.enemylv2x3 -= 3;
-								}
+								Var.bosslv2x -= 3;
+								Var.enemylv2x1 -= 3;
+								Var.enemylv2x2 -= 3;
+								Var.enemylv2x3 -= 3;
 							}
 
 						}
@@ -106,7 +90,7 @@ public class Movement {
 							if (Var.sprint == true) {
 								Var.backx -= 6;
 							} else {
-								Var.backx += 3;
+								Var.backx -= 3;
 							}
 						}
 

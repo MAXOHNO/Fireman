@@ -32,7 +32,10 @@ public class Var {
 	static int enemylv2x1 = 1900, enemylv2x2 = 2500, enemylv2x3 = 3100;
 
 	// Boss Integers Level 2
-	static int bosslv2x = 5000, bosslv2HP = 9;
+	static int bosslv2x = 5000, bosslv2HP = 9, TimerBoss2Die = 0;
+	
+	// Boss Integers Level 3
+	static int bosslv3x = 5000, bosslv3HP = 11;
 
 	// Level Integers
 	static int lv1rchdx = 3500, lv1rchdy = 340;
@@ -65,13 +68,17 @@ public class Var {
 
 	// Boss Level 2
 	static boolean BossExists2 = false, BossIsDying2 = false, BossAttacks2 = false, BossIsAttacked2 = false;
+	
+	// Boss Level 3
+	static boolean BossExists3 = false, BossIsDying3 = false, BossAttacks3 = false, BossIsAttacked3 = false;
 
 	static BufferedImage BackLvl1, BackLvl2, BackLvl3, ESCscreen;
 	static Image gifAnimright, gifAnimleft, gifStandstill, gifAttack, gifChardead;
 	static Image gifJohnny, JohnnyBorad, JohnnyStand;
 	static Image gifStartscreen, gifLvl1Rched, gifLvl2Rched;
 	static Image gifEnemystand, gifEnemydying, gifEnemyattacks;
-	static Image gifBossStandstill2, gifBossIsAttack2;
+	static Image gifBossStandstill2, gifBossIsAttack2, gifBossGetAttacked2, gifBossIsDying;
+	static Image gifBossStandstill3, gifBossIsAttack3;
 
 	// Buttons JButton
 	static JButton btndone, btnsettings, btnshop, btnexit, btninfo;
@@ -93,6 +100,10 @@ public class Var {
 			e.printStackTrace();
 		}
 
+		gifBossIsAttack3 = Toolkit.getDefaultToolkit().createImage("src/Pics/hyperattack.gif");
+		gifBossStandstill3 = Toolkit.getDefaultToolkit().createImage("src/Pics/Hyperhand.gif");
+		gifBossIsDying = Toolkit.getDefaultToolkit().createImage("src/Pics/Boss2IsDying.gif");
+		gifBossGetAttacked2 = Toolkit.getDefaultToolkit().createImage("src/Pics/Boss2Attacked.gif");
 		gifBossIsAttack2 = Toolkit.getDefaultToolkit().createImage("src/Pics/bossAttack.gif");
 		gifBossStandstill2 = Toolkit.getDefaultToolkit().createImage("src/Pics/bossStandstill.gif");
 		gifLvl1Rched = Toolkit.getDefaultToolkit().createImage("src/Pics/Level1Reached.gif");
