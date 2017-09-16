@@ -84,11 +84,14 @@ public class Draw extends JLabel {
 					g.drawImage(Var.gifBossIsDying, Var.bosslv2x, 160, 384, 384, null);
 				}
 			} else if (Var.Level3 == true) {
-				if(Var.BossExists3 == true) {
+				if (Var.BossExists3 == true && Var.BossAttacks3 != true) {
 					g.drawImage(Var.gifBossStandstill3, Var.bosslv3x, 160, 384, 384, null);
 				}
-				if(Var.BossIsAttacked3 == true) {
+				if (Var.BossAttacks3 == true) {
 					g.drawImage(Var.gifBossIsAttack3, Var.bosslv3x, 160, 384, 384, null);
+				}
+				if (Var.BossIsAttacked3 == true) {
+
 				}
 			}
 

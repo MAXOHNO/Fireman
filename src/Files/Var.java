@@ -30,10 +30,13 @@ public class Var {
 
 	// Enemy Integers Level 2
 	static int enemylv2x1 = 1900, enemylv2x2 = 2500, enemylv2x3 = 3100;
+	
+	// Enemy Integers Level 3
+	static int enemylv3x1 = 1500, enemylv3x2 = 1900, enemylv3x3 = 2500, enemylv3x4 = 2900, enemylv3x5 = 3400;
 
 	// Boss Integers Level 2
 	static int bosslv2x = 5000, bosslv2HP = 9, TimerBoss2Die = 0;
-	
+
 	// Boss Integers Level 3
 	static int bosslv3x = 5000, bosslv3HP = 11;
 
@@ -65,10 +68,15 @@ public class Var {
 	static boolean enemyExists2_1 = false, enemyExists2_2 = false, enemyExists2_3 = false;
 	static boolean enemyIsDying2_1 = false, enemyIsDying2_2 = false, enemyIsDying2_3 = false;
 	static boolean enemyAttacks2_1 = false, enemyAttacks2_2 = false, enemyAttacks2_3 = false;
-
+	
+	// Enemy Level 3
+	static boolean enemyExists3_1 = false, enemyExists3_2 = false, enemyExists3_3 = false, enemyExists3_4 = false, enemyExists3_5 = false;
+	static boolean enemyAttacks3_1 = false, enemyAttacks3_2 = false, enemyAttacks3_3 = false, enemyAttacks3_4 = false, enemyAttacks3_5 = false;
+	static boolean enemyIsDying3_1 = false, enemyIsDying3_2 = false, enemyIsDying3_3 = false, enemyIsDying3_4 = false, enemyIsDying3_5 = false;
+	
 	// Boss Level 2
 	static boolean BossExists2 = false, BossIsDying2 = false, BossAttacks2 = false, BossIsAttacked2 = false;
-	
+
 	// Boss Level 3
 	static boolean BossExists3 = false, BossIsDying3 = false, BossAttacks3 = false, BossIsAttacked3 = false;
 
@@ -77,6 +85,7 @@ public class Var {
 	static Image gifJohnny, JohnnyBorad, JohnnyStand;
 	static Image gifStartscreen, gifLvl1Rched, gifLvl2Rched;
 	static Image gifEnemystand, gifEnemydying, gifEnemyattacks;
+	static Image gifEnemystand2, gifEnemydying2, gifEnemyattacks2;
 	static Image gifBossStandstill2, gifBossIsAttack2, gifBossGetAttacked2, gifBossIsDying;
 	static Image gifBossStandstill3, gifBossIsAttack3;
 
