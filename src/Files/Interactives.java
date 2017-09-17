@@ -138,7 +138,7 @@ public class Interactives {
 						}
 					}
 				}
-				
+
 				// Char attacks Boss3
 				if (Var.Level3 == true) {
 					if (Var.BossExists3 == true && Var.ingame == true) {
@@ -178,7 +178,7 @@ public class Interactives {
 						}
 					}
 				}
-				
+
 				// Boss3 attacks Char
 				if (Var.Level3 == true) {
 					if (Var.BossExists3 == true && Var.CharDead == false && Var.ingame == true) {
@@ -213,8 +213,8 @@ public class Interactives {
 					}
 				}
 
-				// Enemy attacks Char Level 2 - 1
 				if (Var.Level2 == true) {
+					// Enemy attacks Char Level 2 - 1
 					if (Var.enemyExists2_1 == true && Var.CharDead == false && Var.Level2 == true
 							&& Var.ingame == true) {
 						if (Var.enemylv2x1 - Var.x <= 150 && Var.enemylv2x1 - Var.x >= 100) {
@@ -227,12 +227,11 @@ public class Interactives {
 								e.printStackTrace();
 							}
 							Var.enemyAttacks2_1 = false;
+
 						}
 					}
-				}
 
-				// Enemy attacks Char Level 2 - 2
-				if (Var.Level2 == true) {
+					// Enemy attacks Char Level 2 - 2
 					if (Var.enemyExists2_2 == true && Var.CharDead == false && Var.Level2 == true
 							&& Var.ingame == true) {
 						if (Var.enemylv2x2 - Var.x <= 150 && Var.enemylv2x2 - Var.x >= 100) {
@@ -246,11 +245,10 @@ public class Interactives {
 							}
 							Var.enemyAttacks2_2 = false;
 						}
-					}
-				}
 
-				// Enemy attacks Char Level 2 - 3
-				if (Var.Level2 == true) {
+					}
+
+					// Enemy attacks Char Level 2 - 3
 					if (Var.enemyExists2_3 == true && Var.CharDead == false && Var.Level2 == true
 							&& Var.ingame == true) {
 						if (Var.enemylv2x3 - Var.x <= 150 && Var.enemylv2x3 - Var.x >= 100) {
@@ -264,6 +262,174 @@ public class Interactives {
 							}
 							Var.enemyAttacks2_3 = false;
 						}
+					}
+
+				}
+
+				if (Var.Level3 == true) {
+					
+					// Enemy Attacks
+					if (Var.enemyExists3_1 == true && Var.CharDead == false && Var.ingame == true) {
+						if (Var.enemylv3x1 - Var.x <= 150 && Var.enemylv3x1 - Var.x >= 100) {
+							Var.HP--;
+							Var.enemyAttacks3_1 = true;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyAttacks3_1 = false;
+						}
+					}
+					if (Var.enemyExists3_2 == true && Var.CharDead == false && Var.ingame == true) {
+						if (Var.enemylv3x2 - Var.x <= 150 && Var.enemylv3x2 - Var.x >= 100) {
+							Var.HP--;
+							Var.enemyAttacks3_2 = true;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyAttacks3_2 = false;
+						}
+					}
+					if (Var.enemyExists3_3 == true && Var.CharDead == false && Var.ingame == true) {
+						if (Var.enemylv3x3 - Var.x <= 150 && Var.enemylv3x3 - Var.x >= 100) {
+							Var.HP--;
+							Var.enemyAttacks3_3 = true;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyAttacks3_3 = false;
+						}
+					}
+					if (Var.enemyExists3_4 == true && Var.CharDead == false && Var.ingame == true) {
+						if (Var.enemylv3x4 - Var.x <= 150 && Var.enemylv3x4 - Var.x >= 100) {
+							Var.HP--;
+							Var.enemyAttacks3_4 = true;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyAttacks3_4 = false;
+						}
+					}
+					if (Var.enemyExists3_5 == true && Var.CharDead == false && Var.ingame == true) {
+						if (Var.enemylv3x5 - Var.x <= 150 && Var.enemylv3x5 - Var.x >= 100) {
+							Var.HP--;
+							Var.enemyAttacks3_5 = true;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyAttacks3_5 = false;
+						}
+					}
+				}
+				
+				// Char Attacks
+				if (Var.enemyExists3_1 == true && Var.ingame == true) {
+					if (Var.inAttack == true) {
+						if (Var.enemylv3x1 - Var.x <= 350) {
+							Var.enemyExists3_1 = false;
+							Var.enemyIsDying3_1 = true;
+							int rndm = (int) (Math.random() * 50);
+							Var.Credits += rndm;
+							System.out.println("Credits: " + Var.Credits);
+							try {
+								Thread.sleep(1600);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyIsDying3_1 = false;
+						}
+
+					}
+				}
+				if (Var.enemyExists3_2 == true && Var.ingame == true) {
+					if (Var.inAttack == true) {
+						if (Var.enemylv3x2 - Var.x <= 350) {
+							Var.enemyExists3_2 = false;
+							Var.enemyIsDying3_2 = true;
+							int rndm = (int) (Math.random() * 50);
+							Var.Credits += rndm;
+							System.out.println("Credits: " + Var.Credits);
+							try {
+								Thread.sleep(1600);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyIsDying3_2 = false;
+						}
+
+					}
+				}
+				if (Var.enemyExists3_3 == true && Var.ingame == true) {
+					if (Var.inAttack == true) {
+						if (Var.enemylv3x3 - Var.x <= 350) {
+							Var.enemyExists3_3 = false;
+							Var.enemyIsDying3_3 = true;
+							int rndm = (int) (Math.random() * 50);
+							Var.Credits += rndm;
+							System.out.println("Credits: " + Var.Credits);
+							try {
+								Thread.sleep(1600);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyIsDying3_3 = false;
+						}
+
+					}
+				}
+				if (Var.enemyExists3_4 == true && Var.ingame == true) {
+					if (Var.inAttack == true) {
+						if (Var.enemylv3x4 - Var.x <= 350) {
+							Var.enemyExists3_4 = false;
+							Var.enemyIsDying3_4 = true;
+							int rndm = (int) (Math.random() * 50);
+							Var.Credits += rndm;
+							System.out.println("Credits: " + Var.Credits);
+							try {
+								Thread.sleep(1600);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyIsDying3_4 = false;
+						}
+
+					}
+				}
+				if (Var.enemyExists3_5 == true && Var.ingame == true) {
+					if (Var.inAttack == true) {
+						if (Var.enemylv3x5 - Var.x <= 350) {
+							Var.enemyExists3_5 = false;
+							Var.enemyIsDying3_5 = true;
+							int rndm = (int) (Math.random() * 50);
+							Var.Credits += rndm;
+							System.out.println("Credits: " + Var.Credits);
+							try {
+								Thread.sleep(1600);
+							} catch (InterruptedException e) {
+
+								e.printStackTrace();
+							}
+							Var.enemyIsDying3_5 = false;
+						}
+
 					}
 				}
 

@@ -89,8 +89,20 @@ public class Movement {
 						if (Var.Level3 == true && Var.backx >= -6400) {
 							if (Var.sprint == true) {
 								Var.backx -= 6;
+								Var.bosslv3x -= 6;
+								Var.enemylv3x1 -= 6;
+								Var.enemylv3x2 -= 6;
+								Var.enemylv3x3 -= 6;
+								Var.enemylv3x4 -= 6;
+								Var.enemylv3x5 -= 6;
 							} else {
 								Var.backx -= 3;
+								Var.enemylv3x1 -= 3;
+								Var.enemylv3x2 -= 3;
+								Var.enemylv3x3 -= 3;
+								Var.enemylv3x4 -= 3;
+								Var.enemylv3x5 -= 3;
+
 							}
 						}
 
@@ -147,8 +159,19 @@ public class Movement {
 						if (Var.Level3 == true && Var.backx <= -10) {
 							if (Var.sprint == true) {
 								Var.backx += 6;
+								Var.bosslv3x += 6;
+								Var.enemylv3x1 += 6;
+								Var.enemylv3x2 += 6;
+								Var.enemylv3x3 += 6;
+								Var.enemylv3x4 += 6;
+								Var.enemylv3x5 += 6;
 							} else {
 								Var.backx += 3;
+								Var.enemylv3x1 += 3;
+								Var.enemylv3x2 += 3;
+								Var.enemylv3x3 += 3;
+								Var.enemylv3x4 += 3;
+								Var.enemylv3x5 += 3;
 							}
 						}
 

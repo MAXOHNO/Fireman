@@ -87,11 +87,29 @@ public class Draw extends JLabel {
 				if (Var.BossExists3 == true && Var.BossAttacks3 != true) {
 					g.drawImage(Var.gifBossStandstill3, Var.bosslv3x, 160, 384, 384, null);
 				}
-				if (Var.BossAttacks3 == true) {
+				if (Var.BossAttacks3 == true && Var.BossIsAttacked3 != true) {
 					g.drawImage(Var.gifBossIsAttack3, Var.bosslv3x, 160, 384, 384, null);
 				}
 				if (Var.BossIsAttacked3 == true) {
 
+				}
+				if (Var.BossIsAttacked3 == true) {
+
+				}
+				if (Var.enemyExists3_1 == true && Var.enemyAttacks3_1 != true) {
+					g.drawImage(Var.gifEnemystand2, Var.enemylv3x1, 345, 256, 256, null);
+				}
+				if (Var.enemyExists3_2 == true && Var.enemyAttacks3_2 != true) {
+					g.drawImage(Var.gifEnemystand2, Var.enemylv3x2, 345, 256, 256, null);
+				}
+				if (Var.enemyExists3_3 == true && Var.enemyAttacks3_3 != true) {
+					g.drawImage(Var.gifEnemystand2, Var.enemylv3x3, 345, 256, 256, null);
+				}
+				if (Var.enemyExists3_4 == true && Var.enemyAttacks3_4 != true) {
+					g.drawImage(Var.gifEnemystand2, Var.enemylv3x4, 345, 256, 256, null);
+				}
+				if (Var.enemyExists3_5 == true && Var.enemyAttacks3_5 != true) {
+					g.drawImage(Var.gifEnemystand2, Var.enemylv3x5, 345, 256, 256, null);
 				}
 			}
 

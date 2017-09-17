@@ -109,6 +109,7 @@ public class Var {
 			e.printStackTrace();
 		}
 
+		gifEnemystand2 = Toolkit.getDefaultToolkit().createImage("src/Pics/standenemyv2.gif");
 		gifBossIsAttack3 = Toolkit.getDefaultToolkit().createImage("src/Pics/hyperattack.gif");
 		gifBossStandstill3 = Toolkit.getDefaultToolkit().createImage("src/Pics/Hyperhand.gif");
 		gifBossIsDying = Toolkit.getDefaultToolkit().createImage("src/Pics/Boss2IsDying.gif");
