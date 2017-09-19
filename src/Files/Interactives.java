@@ -124,7 +124,7 @@ public class Interactives {
 				if (Var.Level2 == true) {
 					if (Var.BossExists2 == true && Var.Level2 == true && Var.ingame == true) {
 						if (Var.inAttack == true) {
-							if (Var.bosslv2x - Var.x <= 350) {
+							if (Var.bosslv2x - Var.x <= 550 && Var.bosslv2x - Var.x >= 10) {
 								Var.Killcount++;
 								Var.bosslv2HP--;
 								Var.BossIsAttacked2 = true;
@@ -273,10 +273,10 @@ public class Interactives {
 				}
 
 				if (Var.Level3 == true) {
-					
-					// Enemy Attacks
+
+					// Enemy Attacks Level 3
 					if (Var.enemyExists3_1 == true && Var.CharDead == false && Var.ingame == true) {
-						if (Var.enemylv3x1 - Var.x <= 150 && Var.enemylv3x1 - Var.x >= 100) {
+						if (Var.enemylv3x1 - Var.x <= 550 && Var.enemylv3x1 - Var.x >= 10) {
 							Var.HP--;
 							Var.enemyAttacks3_1 = true;
 							try {
@@ -289,7 +289,7 @@ public class Interactives {
 						}
 					}
 					if (Var.enemyExists3_2 == true && Var.CharDead == false && Var.ingame == true) {
-						if (Var.enemylv3x2 - Var.x <= 150 && Var.enemylv3x2 - Var.x >= 100) {
+						if (Var.enemylv3x2 - Var.x <= 550 && Var.enemylv3x2 - Var.x >= 10) {
 							Var.HP--;
 							Var.enemyAttacks3_2 = true;
 							try {
@@ -302,7 +302,7 @@ public class Interactives {
 						}
 					}
 					if (Var.enemyExists3_3 == true && Var.CharDead == false && Var.ingame == true) {
-						if (Var.enemylv3x3 - Var.x <= 150 && Var.enemylv3x3 - Var.x >= 100) {
+						if (Var.enemylv3x3 - Var.x <= 550 && Var.enemylv3x3 - Var.x >= 10) {
 							Var.HP--;
 							Var.enemyAttacks3_3 = true;
 							try {
@@ -315,7 +315,7 @@ public class Interactives {
 						}
 					}
 					if (Var.enemyExists3_4 == true && Var.CharDead == false && Var.ingame == true) {
-						if (Var.enemylv3x4 - Var.x <= 150 && Var.enemylv3x4 - Var.x >= 100) {
+						if (Var.enemylv3x4 - Var.x <= 550 && Var.enemylv3x4 - Var.x >= 10) {
 							Var.HP--;
 							Var.enemyAttacks3_4 = true;
 							try {
@@ -328,7 +328,7 @@ public class Interactives {
 						}
 					}
 					if (Var.enemyExists3_5 == true && Var.CharDead == false && Var.ingame == true) {
-						if (Var.enemylv3x5 - Var.x <= 150 && Var.enemylv3x5 - Var.x >= 100) {
+						if (Var.enemylv3x5 - Var.x <= 550 && Var.enemylv3x5 - Var.x >= 10) {
 							Var.HP--;
 							Var.enemyAttacks3_5 = true;
 							try {
@@ -341,11 +341,11 @@ public class Interactives {
 						}
 					}
 				}
-				
-				// Char Attacks
+
+				// Char Attacks Level 3
 				if (Var.enemyExists3_1 == true && Var.ingame == true) {
 					if (Var.inAttack == true) {
-						if (Var.enemylv3x1 - Var.x <= 350) {
+						if (Var.enemylv3x1 - Var.x <= 350 && Var.enemylv3x1 - Var.x >= 10) {
 							Var.enemyExists3_1 = false;
 							Var.enemyIsDying3_1 = true;
 							int rndm = (int) (Math.random() * 50);
@@ -364,7 +364,7 @@ public class Interactives {
 				}
 				if (Var.enemyExists3_2 == true && Var.ingame == true) {
 					if (Var.inAttack == true) {
-						if (Var.enemylv3x2 - Var.x <= 350) {
+						if (Var.enemylv3x2 - Var.x <= 350 && Var.enemylv3x2 - Var.x >= 10) {
 							Var.enemyExists3_2 = false;
 							Var.enemyIsDying3_2 = true;
 							int rndm = (int) (Math.random() * 50);
@@ -383,7 +383,7 @@ public class Interactives {
 				}
 				if (Var.enemyExists3_3 == true && Var.ingame == true) {
 					if (Var.inAttack == true) {
-						if (Var.enemylv3x3 - Var.x <= 350) {
+						if (Var.enemylv3x3 - Var.x <= 350 && Var.enemylv3x3 - Var.x >= 10) {
 							Var.enemyExists3_3 = false;
 							Var.enemyIsDying3_3 = true;
 							int rndm = (int) (Math.random() * 50);
@@ -402,7 +402,7 @@ public class Interactives {
 				}
 				if (Var.enemyExists3_4 == true && Var.ingame == true) {
 					if (Var.inAttack == true) {
-						if (Var.enemylv3x4 - Var.x <= 350) {
+						if (Var.enemylv3x4 - Var.x <= 350 && Var.enemylv3x4 - Var.x >= 10) {
 							Var.enemyExists3_4 = false;
 							Var.enemyIsDying3_4 = true;
 							int rndm = (int) (Math.random() * 50);
@@ -421,7 +421,7 @@ public class Interactives {
 				}
 				if (Var.enemyExists3_5 == true && Var.ingame == true) {
 					if (Var.inAttack == true) {
-						if (Var.enemylv3x5 - Var.x <= 350) {
+						if (Var.enemylv3x5 - Var.x <= 350 && Var.enemylv3x5 - Var.x >= 10) {
 							Var.enemyExists3_5 = false;
 							Var.enemyIsDying3_5 = true;
 							int rndm = (int) (Math.random() * 50);
@@ -474,7 +474,7 @@ public class Interactives {
 								Var.Level3 = true;
 								Var.x = 640;
 								Var.backx = 0;
-								Var.HP = 5;
+								Var.HP = 30;
 								Var.BossExists3 = true;
 								Var.enemyExists3_1 = true;
 								Var.enemyExists3_2 = true;
@@ -495,36 +495,61 @@ public class Interactives {
 			@Override
 			public void run() {
 
+				// Wenn Tot
 				if (Var.ingame == true) {
-					if (Var.HP <= 1) {
+					if (Var.HP == 0 || Var.HP <= 0) {
+
 						Var.CharDead = true;
-						Var.Level1 = true;
-						Var.standstill = false;
-						Var.moveleft = false;
-						Var.moveright = false;
-						Var.attack = false;
-						Var.Level2 = false;
+						Var.x = 740;
+						Var.backx = 0;
 						Var.Score = 0;
-						Var.Deaths += 1;
-						if (Var.Credits >= 10) {
-							Var.Credits--;
-							Var.Credits--;
-							Var.Credits--;
-							Var.Credits--;
-							Var.Credits--;
-							if (Var.Level2 == true) {
-								Var.enemyExists2_1 = true;
-								Var.enemyExists2_2 = true;
-								Var.enemyExists2_3 = true;
-								Var.BossExists2 = true;
+						Var.HP = 5;
+						Var.Deaths++;
 
-								Var.enemylv2x1 = 1900;
-								Var.enemylv2x2 = 2500;
-								Var.enemylv2x3 = 3100;
+						Var.enemylv1x = 2300;
+						Var.enemyExists = true;
 
-								Var.bosslv2x = 5000;
-								Var.bosslv2HP = 9;
-							}
+						Var.enemylv2x1 = 1900;
+						Var.enemylv2x2 = 2500;
+						Var.enemylv2x3 = 3100;
+						Var.bosslv2x = 5000;
+						Var.bosslv2HP = 7;
+						Var.enemyExists2_1 = false;
+						Var.enemyExists2_2 = false;
+						Var.enemyExists2_3 = false;
+						Var.BossExists2 = false;
+
+						Var.enemylv3x1 = 1500;
+						Var.enemylv3x2 = 1900;
+						Var.enemylv3x3 = 2500;
+						Var.enemylv3x4 = 2900;
+						Var.enemylv3x5 = 3400;
+						Var.bosslv3x = 5000;
+						Var.bosslv3HP = 9;
+						Var.enemyExists3_1 = false;
+						Var.enemyExists3_2 = false;
+						Var.enemyExists3_3 = false;
+						Var.enemyExists3_4 = false;
+						Var.enemyExists3_5 = false;
+						Var.BossExists3 = false;
+
+						Var.lv1rchdx = 3500;
+						Var.lv2rchdx = 7300;
+						Var.Level1 = true;
+						Var.Level2 = false;
+						Var.Level3 = false;
+
+						Var.standstill = true;
+						Var.attack = false;
+						Var.sprint = false;
+						Var.moveright = false;
+						Var.moveleft = false;
+						
+						try {
+							Thread.sleep(2000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
 						}
 
 					}
@@ -532,7 +557,7 @@ public class Interactives {
 
 			}
 		}, 0, 10);
-		
+
 		System.out.println("System: Interactives successfully loaded!");
 
 	}
