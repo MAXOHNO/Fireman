@@ -53,7 +53,7 @@ public class Draw extends JLabel {
 				if (Var.enemyExists2_1 == true) {
 					g.drawImage(Var.gifEnemystand, Var.enemylv2x1, 345, 256, 256, null);
 				}
-				if (Var.enemyExists2_3 == true) {
+				if (Var.enemyExists2_2 == true) {
 					g.drawImage(Var.gifEnemystand, Var.enemylv2x2, 345, 256, 256, null);
 				}
 				if (Var.enemyExists2_3 == true) {
@@ -133,12 +133,6 @@ public class Draw extends JLabel {
 				Var.moveright = false;
 				Var.moveleft = false;
 				g.drawImage(Var.gifChardead, Var.x, Var.y, 256, 256, null);
-				try {
-					Thread.sleep(5100);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
 				Var.backx = -6;
 				Var.x = 740;
 				Var.y = 340;
@@ -177,7 +171,8 @@ public class Draw extends JLabel {
 
 		// Wenn in Escape
 		if (Var.escape == true) {
-			g.drawImage(Var.ESCscreen, 0, 0, Var.screenwidth, Var.screenheight, null);
+			// g.drawImage(Var.ESCscreen, 0, 0, Var.screenwidth, Var.screenheight, null);
+
 		}
 		// Wenn in Startscreen
 		if (Var.startscreen == true) {
@@ -193,6 +188,19 @@ public class Draw extends JLabel {
 			g.drawString("Credits: " + Var.Credits, 20, 80);
 			g.drawString("Deaths: " + Var.Deaths, 20, 120);
 			g.drawString("Survived Time: " + Var.Score, 20, 100);
+			g.drawString("Killcount: " + Var.Killcount, 20, 140);
+
+			if (Var.BossExists2 == true) {
+				g.drawString("HP: " + Var.bosslv2HP, Var.bosslv2x - 15, 190);
+			}
+			if (Var.BossExists3 == true) {
+				g.drawString("HP: " + Var.bosslv3HP, Var.bosslv3x - 15, 190);
+			}
+		}
+		
+		// Achivements
+		if(Achievements.FirstBlood == true) {
+		//	g.drawImage(Var.gifFirstblood, arg1, arg2, arg3, arg4, arg5)
 		}
 
 		repaint();
