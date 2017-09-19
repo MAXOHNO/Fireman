@@ -29,6 +29,7 @@ public class Interactives {
 					if (Var.enemyExists == true && Var.Level1 == true && Var.ingame == true) {
 						if (Var.inAttack == true) {
 							if (Var.enemylv1x - Var.x <= 350) {
+								Var.Killcount++;
 								Var.enemyExists = false;
 								Var.enemyIsDying = true;
 								int rndm = (int) (Math.random() * 50);
@@ -52,6 +53,7 @@ public class Interactives {
 					if (Var.enemyExists2_1 == true && Var.ingame == true) {
 						if (Var.inAttack == true) {
 							if (Var.enemylv2x1 - Var.x <= 350) {
+								Var.Killcount++;
 								Var.enemyExists2_1 = false;
 								Var.enemyIsDying2_1 = true;
 								int rndm = (int) (Math.random() * 50);
@@ -75,6 +77,7 @@ public class Interactives {
 					if (Var.enemyExists2_2 == true && Var.ingame == true) {
 						if (Var.inAttack == true) {
 							if (Var.enemylv2x2 - Var.x <= 350) {
+								Var.Killcount++;
 								Var.enemyExists2_2 = false;
 								Var.enemyIsDying2_2 = true;
 								int rndm = (int) (Math.random() * 50);
@@ -98,6 +101,7 @@ public class Interactives {
 					if (Var.enemyExists2_3 == true && Var.ingame == true) {
 						if (Var.inAttack == true) {
 							if (Var.enemylv2x3 - Var.x <= 350) {
+								Var.Killcount++;
 								Var.enemyExists2_3 = false;
 								Var.enemyIsDying2_3 = true;
 								int rndm = (int) (Math.random() * 50);
@@ -121,6 +125,7 @@ public class Interactives {
 					if (Var.BossExists2 == true && Var.Level2 == true && Var.ingame == true) {
 						if (Var.inAttack == true) {
 							if (Var.bosslv2x - Var.x <= 350) {
+								Var.Killcount++;
 								Var.bosslv2HP--;
 								Var.BossIsAttacked2 = true;
 								int rndm = (int) (Math.random() * 100);
@@ -144,6 +149,7 @@ public class Interactives {
 					if (Var.BossExists3 == true && Var.ingame == true) {
 						if (Var.inAttack == true) {
 							if (Var.bosslv3x - Var.x <= 200) {
+								Var.Killcount++;
 								Var.bosslv3HP--;
 								Var.BossIsAttacked3 = true;
 								int rndm = (int) (Math.random() * 200);
@@ -182,7 +188,7 @@ public class Interactives {
 				// Boss3 attacks Char
 				if (Var.Level3 == true) {
 					if (Var.BossExists3 == true && Var.CharDead == false && Var.ingame == true) {
-						if (Var.bosslv3x - Var.x <= 150 && Var.bosslv3x - Var.x >= 20) {
+						if (Var.bosslv3x - Var.x <= 200 && Var.bosslv3x - Var.x >= 20) {
 							Var.HP--;
 							Var.BossAttacks3 = true;
 							try {
@@ -526,6 +532,8 @@ public class Interactives {
 
 			}
 		}, 0, 10);
+		
+		System.out.println("System: Interactives successfully loaded!");
 
 	}
 
