@@ -6,7 +6,7 @@ import java.awt.event.MouseListener;
 public class MouseHandler implements MouseListener {
 
 	public MouseHandler() {
-
+		System.out.println("System: KeyHandler loaded successfully!");
 	}
 
 	@Override
