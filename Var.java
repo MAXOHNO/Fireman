@@ -48,7 +48,7 @@ public class Var {
 	// Game Booleans
 	static boolean ingame = false, startscreen = true, escape = false;
 	static boolean Level1 = false, Level2 = false, Level3 = false;
-	static boolean inShop = false, inSettings = false, inInfo = false, onExit = false;
+	static boolean inShop = false, inSettings = false;
 
 	// Me Booleans
 	static boolean attack = false, block = false, inAttack = false;
@@ -93,9 +93,6 @@ public class Var {
 	static Image gifBossStandstill2, gifBossIsAttack2, gifBossGetAttacked2, gifBossIsDying;
 	static Image gifBossStandstill3, gifBossIsAttack3;
 
-	// Buttons JButton
-	static JButton btndone, btnsettings, btnshop, btnexit, btninfo;
-
 	public Var() {
 		System.out.println("System: Var loaded successfully!");
 		// Images
@@ -113,6 +110,7 @@ public class Var {
 			e.printStackTrace();
 		}
 
+		gifEnemyattacks2 = Toolkit.getDefaultToolkit().createImage("src/Pics/attackenemyv2.gif");
 		gifEnemystand2 = Toolkit.getDefaultToolkit().createImage("src/Pics/standenemyv2.gif");
 		gifBossIsAttack3 = Toolkit.getDefaultToolkit().createImage("src/Pics/hyperattack.gif");
 		gifBossStandstill3 = Toolkit.getDefaultToolkit().createImage("src/Pics/Hyperhand.gif");
