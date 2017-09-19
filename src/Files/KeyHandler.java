@@ -6,6 +6,7 @@ import java.awt.event.KeyListener;
 public class KeyHandler implements KeyListener {
 
 	public KeyHandler() {
+		System.out.println("System: KeyHandler loaded successfully!");
 	}
 
 	@Override
@@ -43,6 +44,19 @@ public class KeyHandler implements KeyListener {
 				Var.enemyExists = true;
 				Var.standstill = true;
 				Var.escape = false;
+			} else if (e.getKeyCode() == KeyEvent.VK_L) {
+				Var.Score = 99999;
+				Var.sprint = false;
+				Var.startscreen = false;
+				Var.ingame = true;
+				Var.Level3 = true;
+				Var.standstill = true;
+				Var.escape = false;
+				Var.enemyExists3_1 = true;
+				Var.enemyExists3_2 = true;
+				Var.enemyExists3_3 = true;
+				Var.enemyExists3_4 = true;
+				Var.enemyExists3_5 = true;
 			}
 		}
 
