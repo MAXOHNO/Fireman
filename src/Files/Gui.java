@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -166,17 +168,132 @@ public class Gui {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (btnExit.isEnabled()) {
+					try {
+						MainClass.SaveState();
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 					System.exit(1);
 				}
 
 			}
 		});
 
+		JButton btnDone = new JButton();
+		btnDone.setSize(150, 50);
+		btnDone.setBounds(1060, 600, 150, 50);
+		btnDone.setFont(text);
+		btnDone.setText("Done:");
+		btnDone.setBackground(Color.GRAY);
+		btnDone.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				Var.inShop = false;
+				Var.inSettings = false;
+				Var.ingame = false;
+				Var.escape = true;
+
+			}
+		});
+
+		JButton btnJohnny = new JButton();
+		btnJohnny.setSize(300, 50);
+		btnJohnny.setBounds(500, 160, 300, 50);
+		btnJohnny.setFont(text);
+		btnJohnny.setText("Buy Johnny!");
+		btnJohnny.setBackground(Color.GRAY);
+		btnJohnny.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				if (Var.Johnnybuy == false && Var.Credits >= 150) {
+					Var.Johnnybuy = true;
+				}
+
+			}
+		});
+
+		JButton btnBuyHP = new JButton();
+		btnBuyHP.setSize(300, 50);
+		btnBuyHP.setBounds(500, 260, 300, 50);
+		btnBuyHP.setFont(text);
+		btnBuyHP.setText("+5 HP Upgrade");
+		btnBuyHP.setBackground(Color.GRAY);
+		btnBuyHP.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				if (Var.hpbuyed == false && btnBuyHP.isEnabled() && Var.Credits >= 75) {
+					Var.Credits -= 75;
+					Var.HP += 5;
+					btnBuyHP.isEnabled();
+				}
+
+			}
+		});
+
+		JButton btnsave = new JButton();
+		btnsave.setSize(300, 50);
+		btnsave.setBounds(500, 160, 300, 50);
+		btnsave.setFont(text);
+		btnsave.setText("Save the Game");
+		btnsave.setBackground(Color.GREEN);
+		btnsave.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				if (btnsave.isEnabled()) {
+					try {
+						File gameFile = new File("gamefolder/gamefile.txt");
+						
+						MainClass.SaveState();
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				}
+
+			}
+		});
+
+		JButton btnreset = new JButton();
+		btnreset.setSize(300, 50);
+		btnreset.setBounds(500, 260, 300, 50);
+		btnreset.setFont(text);
+		btnreset.setText("RESET THE GAME");
+		btnreset.setBackground(Color.RED);
+		btnreset.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				if (btnsave.isEnabled()) {
+
+					File gameFile = new File("gamefolder/gamefile.txt");
+
+					MainClass.delete(gameFile);
+				}
+
+			}
+		});
+
+		Var.jf1.setBackground(Color.GREEN);
 		Var.jf1.add(btnStg);
 		Var.jf1.add(btnShp);
 		Var.jf1.add(btnRestart);
 		Var.jf1.add(btnExit);
 		Var.jf1.add(btnRtrn);
+		Var.jf1.add(btnDone);
+		Var.jf1.add(btnBuyHP);
+		Var.jf1.add(btnJohnny);
+		Var.jf1.add(btnsave);
+		Var.jf1.add(btnreset);
 
 		Timer esc = new Timer();
 		esc.scheduleAtFixedRate(new TimerTask() {
@@ -200,6 +317,41 @@ public class Gui {
 						btnExit.setVisible(false);
 						btnRtrn.setVisible(false);
 					}
+				}
+
+				if (Var.inShop == true || Var.inSettings == true) {
+					btnDone.setVisible(true);
+				} else if (Var.inSettings == false && Var.inShop == false) {
+					btnDone.setVisible(false);
+				}
+
+				if (Var.inShop == true && Var.escape == false && Var.ingame == false) {
+					btnBuyHP.setVisible(true);
+					btnJohnny.setVisible(true);
+				} else if (Var.inShop == false) {
+					btnBuyHP.setVisible(false);
+					btnJohnny.setVisible(false);
+				}
+
+				if (Var.inSettings == true && Var.escape == false && Var.ingame == false) {
+					btnsave.setVisible(true);
+					btnreset.setVisible(true);
+				} else if (Var.inSettings == false) {
+					btnsave.setVisible(false);
+					btnreset.setVisible(false);
+				}
+
+				if (Var.hpbuyed == false && Var.Credits <= 75) {
+					btnBuyHP.setBackground(Color.RED);
+				} else if (Var.hpbuyed == false && Var.Credits >= 75) {
+					btnBuyHP.setBackground(Color.GREEN);
+				}
+				if (Var.Johnnybuy == true) {
+					btnJohnny.setBackground(Color.YELLOW);
+				} else if (Var.Johnnybuy == false && Var.Credits <= 150) {
+					btnJohnny.setBackground(Color.RED);
+				} else if (Var.Johnnybuy == false && Var.Credits >= 150) {
+					btnJohnny.setBackground(Color.GREEN);
 				}
 
 			}
