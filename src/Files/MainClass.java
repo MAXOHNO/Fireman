@@ -9,10 +9,6 @@ import java.util.Scanner;
 
 public class MainClass {
 	public static void main(String[] args) throws IOException {
-
-		File gameFolder = new File("gamefolder");
-		File gameFile = new File("gamefolder/gamefile.txt");
-		
 		new Draw();
 		new Gui();
 		new Var();
@@ -20,14 +16,6 @@ public class MainClass {
 		new Movement();
 		new Interactives();
 		new MouseHandler();
-		
-		create(gameFolder, gameFile);
-
-		read(gameFile);
-
-		load(gameFile);
-
-		save(gameFile);
 
 	}
 
@@ -164,11 +152,11 @@ public class MainClass {
 
 		// ************************************************ //
 
-		String contentsToWrite ="[GAME SETTINGS]" + "\n" + "[HP] " + shp + "\n" + "[Credits] " + scredits + "\n" + "[Level1] " + sl1 + "\n"
-				+ "[Level2] " + sl2 + "\n" + "[Level3] " + sl3 + "\n" + "[Johnny] " + sjohn + "\n" + "[EnemyL1x]"
-				+ exl1x + "\n" + "[EnemyL2x1]" + exl2x1 + "\n" + "[EnemyL2x2]" + exl2x2 + "\n" + "[EnemyL2x3]" + exl2x3
-				+ "\n" + "[EnemyL3x1]" + exl3x1 + "\n" + "[EnemyL3x2]" + exl3x2 + "\n" + "[EnemyL3x1]" + exl3x3 + "\n"
-				+ "[EnemyL3x4]" + exl3x4 + "\n" + "[EnemyL3x1]" + exl3x5 + "\n"
+		String contentsToWrite = "[GAME SETTINGS]" + "\n" + "[HP] " + shp + "\n" + "[Credits] " + scredits + "\n"
+				+ "[Level1] " + sl1 + "\n" + "[Level2] " + sl2 + "\n" + "[Level3] " + sl3 + "\n" + "[Johnny] " + sjohn
+				+ "\n" + "[EnemyL1x]" + exl1x + "\n" + "[EnemyL2x1]" + exl2x1 + "\n" + "[EnemyL2x2]" + exl2x2 + "\n"
+				+ "[EnemyL2x3]" + exl2x3 + "\n" + "[EnemyL3x1]" + exl3x1 + "\n" + "[EnemyL3x2]" + exl3x2 + "\n"
+				+ "[EnemyL3x1]" + exl3x3 + "\n" + "[EnemyL3x4]" + exl3x4 + "\n" + "[EnemyL3x1]" + exl3x5 + "\n"
 				+ "[EnemyL1e]" + seel1x + "\n" + "[EnemyL2e1]" + seel2x1 + "\n" + "[EnemyL2e2]" + seel2x2 + "\n"
 				+ "[EnemyL2e3]" + seel2x3 + "\n" + "[EnemyL3e1]" + seel3x1 + "\n" + "[EnemyL3e2]" + seel3x2 + "\n"
 				+ "[EnemyL3e3]" + seel3x3 + "\n" + "[EnemyL3e4]" + seel3x4 + "\n" + "[EnemyL3e5]" + seel3x5 + "\n";
