@@ -36,12 +36,8 @@ public class KeyHandler implements KeyListener {
 			if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 				Var.Timer1 = 0;
 				Var.Score = 0;
-				Var.sprint = false;
 				Var.startscreen = false;
-				Var.Johnnystand = true;
 				Var.ingame = true;
-				Var.Level1 = true;
-				Var.enemyExists = true;
 				Var.standstill = true;
 				Var.escape = false;
 			} else if (e.getKeyCode() == KeyEvent.VK_L) {
@@ -60,21 +56,35 @@ public class KeyHandler implements KeyListener {
 			}
 		}
 
-		if (Var.ingame == true && e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-			Var.ingame = false;
-			Var.escape = true;
-		} else if (Var.ingame == false && Var.escape == true && e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-			Var.ingame = true;
-			Var.escape = false;
+		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+			if (Var.ingame == true) {
+				Var.ingame = false;
+				Var.escape = true;
+			} else if (Var.ingame == false && Var.escape == true && e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+				Var.ingame = true;
+				Var.escape = false;
+			}
+		}
+
+		if (e.getKeyCode() == KeyEvent.VK_E) {
+			if (Var.ingame == true) {
+				Var.ingame = false;
+				Var.invent = true;
+			} else if (Var.invent == true) {
+				Var.craft = false;
+				Var.invent = false;
+				Var.ingame = true;
+			}
 		}
 
 		if (Var.ingame == true && e.getKeyCode() == KeyEvent.VK_X) {
-			if (Var.Johnnyenable == false) {
-				Var.Johnnyenable = true;
-			} else {
-				Var.Johnnyenable = false;
+			if (Var.Johnnybuy == true) {
+				if (Var.Johnnyenable == false) {
+					Var.Johnnyenable = true;
+				} else {
+					Var.Johnnyenable = false;
+				}
 			}
-
 		}
 	}
 
