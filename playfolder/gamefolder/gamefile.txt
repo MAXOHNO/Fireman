@@ -1,0 +1,25 @@
+[GAME SETTINGS]
+[HP] 3
+[Credits] 9999
+[Level1] false
+[Level2] false
+[Level3] false
+[Johnny] false
+[EnemyL1x]2300
+[EnemyL2x1]1900
+[EnemyL2x2]2500
+[EnemyL2x3]3100
+[EnemyL3x1]1500
+[EnemyL3x2]1900
+[EnemyL3x1]2500
+[EnemyL3x4]2900
+[EnemyL3x1]3400
+[EnemyL1e]false
+[EnemyL2e1]false
+[EnemyL2e2]false
+[EnemyL2e3]false
+[EnemyL3e1]false
+[EnemyL3e2]false
+[EnemyL3e3]false
+[EnemyL3e4]false
+[EnemyL3e5]false
